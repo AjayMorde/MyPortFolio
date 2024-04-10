@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
+// import { useState} from "react";
+import Navbar from './components/Navbars/Navarbar';
+import HomePage from './pages/HomePage';
+import About from './pages/About';
+import SkillPage from './pages/SkillsPage';
+import ProjectPage from './pages/ProjectPage';
+import MyExperience from './pages/MyExperience';
+import ContactPage from './pages/ContactPage';
 
-function App() {
+
+// import Error from './pages/Error';
+
+
+const App = () => {
+  // const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
+      <Route path="/" element={<HomePage/>} />
+      <Route path="/about" element={<About/>} />
+      <Route path="/skills" element={<SkillPage/>} />
+      <Route path="/projects" element={<ProjectPage />} />
+      <Route path="/experience" element={<MyExperience/>} />
+      <Route path="/contact" element={<ContactPage/>} />
+      
+  
+      
+      </Routes>
+    </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
