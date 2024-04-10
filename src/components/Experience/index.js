@@ -81,6 +81,7 @@ const index = () => {
                 <Title>Experience</Title>
                 <Desc>
                     <h4> INTERNSHIP| Sharpener </h4><br />
+                    <h4>Software Developer Trainee At Numetry Technologies</h4> <br />
                     My work experience as a Fullstack developer at Sharpener involves working on different projects
                 </Desc>
                 <TimelineSection>
